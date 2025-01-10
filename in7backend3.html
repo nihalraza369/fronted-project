@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Backend Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #444;
+        }
+
+        
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #0078d7;
+            font-weight: bold;
+        }
+
+
+        
+        .code-container {
+            margin-bottom: 20px;
+        }
+
+        .code-section {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+
+        .output-section {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+            border-left: 5px solid #4caf50;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1</h1>
+    </header>
+    <main>
+        <p>This is the code or details for Project 1:</p>
+        
+        <div class="code-container">
+            <h2>Code:</h2>
+            <div class="code-section">
+                <pre>
+            #"I have made a weight calculator in this game. You just need to enter your weight first, and then in the gravity-factor, there are names of planets. If you choose any planet's name, it will add the weight for that planet to your weight.
+earth_weight = float(input("Enter a weight on Earth: "))
+
+gravity_factors = {
+    "mercury": 0.376,
+    "venus": 0.889,
+    "mars": 0.378,
+    "jupiter":2.36,
+    "saturn":1.081,
+    "uranus":0.815,
+    "neptune":1.14
+    }
+
+planet=input("enter a planet: ")
+
+if planet in gravity_factors:
+    planet_weight = earth_weight * gravity_factors[planet]
+    print(f"The equivalent weight on {planet}:", round(planet_weight, 2))
+else:
+    print("Invalid planet name.")
+#
+"The game I have made below is the same, but I made this game easier. The game below is a bit harder than this one."
+</pre>
+</div>
+</div>
+
+
+<div class="output-container">
+    <h2>Output:</h2>
+    <div class="output-section">
+        <pre>
+Enter a weight on Earth: 120
+enter a planet: jupiter
+The equivalent weight on jupiter: 283.2
+</pre>
+</div>
+</div>
+      
+<div class="code-container">
+    <h2>Code:</h2>
+    <div class="code-section">
+        <pre>   
+            MERCURY_GRAVITY = 0.376
+VENUS_GRAVITY = 0.889
+MARS_GRAVITY = 0.378
+JUPITER_GRAVITY = 2.36
+SATURN_GRAVITY = 1.081
+URANUS_GRAVITY = 0.815
+NEPTUNE_GRAVITY = 1.14
+def main():
+    earth_weight = float(input("Enter a weight on Earth: "))
+    planet = input("Enter a planet: ")
+    if planet == "Mercury":
+        gravity_constant = MERCURY_GRAVITY
+    elif planet == "Venus":
+        gravity_constant = VENUS_GRAVITY
+    elif planet == "Mars":
+        gravity_constant = MARS_GRAVITY
+    elif planet == "Jupiter":
+        gravity_constant = JUPITER_GRAVITY
+    elif planet == "Saturn":
+        gravity_constant = SATURN_GRAVITY
+    elif planet == "Uranus":
+        gravity_constant = URANUS_GRAVITY
+    else:
+        gravity_constant = NEPTUNE_GRAVITY
+
+    planetary_weight = earth_weight * gravity_constant
+    rounded_planetary_weight = round(planetary_weight, 2)
+
+    print("The equivalent weight on " + planet + ":  " + str(rounded_planetary_weight))
+
+if __name__ == "__main__":
+    main()
+</pre>
+</div>
+</div>
+     
+
+<div class="output-container">
+    <h2>Output:</h2>
+    <div class="output-section">
+        <pre>
+Enter a weight on Earth: 67
+Enter a planet: mercury
+</pre>
+</div>
+</div>
+        <a href="in7backend.html">Go Back to Projects</a>
+    </main>
+</body>
+</html>

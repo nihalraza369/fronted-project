@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Backend Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #444;
+        }
+
+       
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #0078d7;
+            font-weight: bold;
+        }
+
+        .code-container {
+            margin-bottom: 20px;
+        }
+
+        .code-section {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+
+        .output-section {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+            border-left: 5px solid #4caf50;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1</h1>
+    </header>
+    <main>
+        <p>This is the code or details for Project 1:</p>
+        <div class="code-container">
+            <h2>Code:</h2>
+            <div class="code-section">
+                <pre>
+    import random
+    
+    def main():
+        secret_number = random.randint(0,99)
+        guess = None
+    
+        print("I am thinking of a number between 0 and 99...")
+    
+        while guess != secret_number:
+            guess = int(input("Enter a guess: "))
+    
+            if guess > secret_number:
+                print("Your guess is too high")
+            elif guess < secret_number:
+                print("Your guess is too low")
+            else:
+                print(f"Congrats! The number was: {secret_number}🎉🥳 ")
+    
+    if __name__ == '__main__':
+        main()
+                </pre>
+            </div>
+        </div>
+    
+        <div class="output-container">
+            <h2>Output:</h2>
+            <div class="output-section">
+                <pre>
+    I am thinking of a number between 0 and 99...
+    Enter a guess: 78
+    Your guess is too low
+    Enter a guess: 89
+    Your guess is too high
+    Enter a guess: 75
+    Your guess is too low
+    Enter a guess: 80
+    Congrats! The number was: 80🎉🥳 
+                </pre>
+            </div>
+        </div>
+
+
+        <div class="code-container">
+            <h2>Code:</h2>
+            <div class="code-section">
+                <pre>
+
+    #"This game is similar to the previous one, but in this, if you win the game, it will ask you if you want to play again. If you say 'yes,'the game will continue, and if you say 'no,' it will send a message saying 'Sorry to see you go!'"
+import random
+
+def main():
+    secret_number = random.randint(0, 99)
+    guess = None
+    name1 = "yes"
+    name2 = "no"
+
+    print("I am thinking of a number between 0 and 99...")
+    print()
+
+    while guess != secret_number:
+        guess = int(input("Enter a guess: "))
+
+        if guess > secret_number:
+            print("Your guess is too high")
+            print()
+        elif guess < secret_number:
+            print("Your guess is too low")
+            print()
+        else:
+            print(f"Congrats! The number was: {secret_number} 🎉🥳 ")
+            print()
+
+
+            play_again = input("Do you want to play again? (yes/no): ").lower()
+            print()
+
+            if play_again == name1:
+                print("Let's go! Starting a new game.")
+                main()
+                break
+            elif play_again == name2:
+                print("Sorry to see you go!")
+                break
+            else:
+                print("Invalid input. Please type 'yes' or 'no'.")
+                break
+
+if __name__ == '__main__':
+    main()
+
+</pre>
+</div>
+</div>
+     
+    <div class="output-container">
+        <h2>Output:</h2>
+        <div class="output-section">
+            <pre>
+I am thinking of a number between 0 and 99...
+
+Enter a guess: 89
+Your guess is too high
+
+Enter a guess: 40
+Your guess is too low
+
+Enter a guess: 50
+Your guess is too low
+
+Enter a guess: 60
+Your guess is too low
+
+Enter a guess: 70
+Your guess is too low
+
+Enter a guess: 80
+Your guess is too low
+
+Enter a guess: 87
+Your guess is too high
+
+Enter a guess: 85
+Your guess is too high
+
+Enter a guess: 82
+Your guess is too low
+
+Enter a guess: 84
+Your guess is too high
+
+Enter a guess: 83
+Congrats! The number was: 83 🎉🥳 
+
+Do you want to play again? (yes/no): yes
+
+Let's go! Starting a new game.
+I am thinking of a number between 0 and 99...
+
+Enter a guess: 89
+Your guess is too high
+
+Enter a guess: 50
+Your guess is too high
+
+Enter a guess: 40
+Your guess is too high
+
+Enter a guess: 30
+Congrats! The number was: 30 🎉🥳 
+
+Do you want to play again? (yes/no): no
+
+Sorry to see you go!
+</pre>
+</div>
+</div>
+
+        <a href="in7backend.html">Go Back to Projects</a>
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scrollbars */
+    height: 100vh;
+  }
+  
+  /* Split Container */
+  .split-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Left and Right Panels */
+  .split {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000000;
+    transition: all 1.5s ease; /* Smooth transition */
+  }
+  
+  .split.left {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  
+  .split.right {
+    right: 0;
+    transform: translateX(100%);
+  }
+  
+  /* Center Content */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect center alignment */
+    text-align: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    z-index: 3; /* Above the panels */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease 2s; /* Appear after panels merge */
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  

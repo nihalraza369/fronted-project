@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Backend Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #444;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #0078d7;
+            font-weight: bold;
+        }
+
+        
+        .code-container {
+            margin-bottom: 20px;
+        }
+
+        .code-section {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+
+        .output-section {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+            border-left: 5px solid #4caf50;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1</h1>
+    </header>
+    <main>
+        <p>This is the code or details for Project 1:</p>
+        
+        
+        <div class="code-container">
+            <h2>Code:</h2>
+            <div class="code-section">
+                <pre>
+            
+#"I have made this game based on a table, where you just have to multiply. There will be 5 rounds, and each round will have a different number. If you answer correctly, your score will increase by 1. If you answer incorrectly, it will say 'Oops! The correct answer was.' After all 5 rounds, your total score will be displayed."
+import random
+
+calculate_num = 5
+score = 0
+
+print("Welcome to the Multiplication Game!")
+print()
+
+for round_num in range(1, calculate_num + 1):
+    print(f"Round {round_num}")
+    print()
+
+
+    num1 = random.randint(1, 10)
+    num2 = random.randint(1, 10)
+
+    print(f"What is {num1} * {num2}?")
+    calculate = num1 * num2
+    user_guess = int(input("Enter your answer: "))
+
+    if user_guess == calculate:
+        score += 1
+        print(f"Correct! Score: {score} 🎉")
+    else:
+        print(f"Oops! The correct answer was {calculate}")
+
+    print()
+
+print(f"Game over! Your total score is: {score}")
+
+</pre>
+</div>
+</div>
+
+<div class="output-container">
+    <h2>Output:</h2>
+    <div class="output-section">
+        <pre>
+Welcome to the Multiplication Game!
+
+Round 1
+
+What is 6 * 3?
+Enter your answer: 18
+Correct! Score: 1 🎉
+
+Round 2
+
+What is 8 * 4?
+Enter your answer: 32
+Correct! Score: 2 🎉
+
+Round 3
+
+What is 9 * 5?
+Enter your answer: 45
+Correct! Score: 3 🎉
+
+Round 4
+
+What is 6 * 1?
+Enter your answer: 6
+Correct! Score: 4 🎉
+
+Round 5
+
+What is 2 * 9?
+Enter your answer: 89
+Oops! The correct answer was 18
+
+Game over! Your total score is: 4
+</pre>
+</div>
+</div>
+
+        <a href="in7backend.html">Go Back to Projects</a>
+    </main>
+</body>
+</html>

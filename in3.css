@@ -1,0 +1,88 @@
+/*
+.skill-container .circle {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.skill-container .circle-overlay-image {
+    width: 180px;
+    height: 180px; 
+    left: -176%;
+    top: -21px;
+    transform: translateX(-50%); 
+    opacity: 0.8;
+    z-index: 0; 
+    transition: all 0.3s ease; 
+}
+
+.skill-container:hover .circle-overlay-image {
+    transform: scale(1.1); 
+    opacity: 1; 
+    filter: brightness(1.2); 
+}
+
+@keyframes animate-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animate-pop-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes animate-image-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 0.8;
+        transform: translateY(0); 
+    }
+}
+*/
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(rgb(231, 231, 231) 0%, rgb(231, 231, 231) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover 
+}
+
+.circle-text {
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #636363;
+}

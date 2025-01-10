@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+  
+  .section {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for animations */
+  }
+  
+  .home {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+  }
+  
+  .about {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+  }
+  
+  .contact {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    color: white;
+  }
+  
+  .scroll-link {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-link:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Contact Form Styles */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+  }
+/* styles.css */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Move element slightly downward */
+    transition: opacity 1s ease, transform 1s ease; /* 2 seconds duration for the animation */
+  }
+    
+  

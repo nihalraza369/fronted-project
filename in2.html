@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nihal Raza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#9333EA',
+                    },
+                },
+            },
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from("#home", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out" });
+            gsap.utils.toArray("section").forEach((section, index) => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                    },
+                    duration: 1.5,
+                    x: index % 2 === 0 ? -100 : 100,
+                    opacity: 0,
+                    ease: "power3.out",
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-gray-800 shadow-lg">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <h1 class="text-2xl font-bold text-primary">Nihal Raza</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-secondary">Home</a></li>
+                <li><a href="#about" class="hover:text-secondary">About</a></li>
+                <li><a href="#portfolio" class="hover:text-secondary">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-secondary">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary">
+        <div class="text-center">
+            <img src="namei.jpeg" alt="Nihal Raza" class="w-40 h-40 mx-auto rounded-full shadow-lg">
+            <h2 class="text-4xl md:text-6xl font-extrabold mt-4">Hi, I'm Nihal Raza</h2>
+            <p class="mt-4 text-lg">A Full Stack Developer | AI Enthusiast | Innovator</p>
+            <a href="#portfolio" class="mt-6 inline-block bg-white text-primary px-6 py-3 rounded-lg shadow-lg hover:bg-secondary hover:text-white">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-secondary">About Me</h2>
+            <p class="mt-6 text-center text-gray-300">I'm a passionate developer with expertise in web development and AI solutions. My goal is to create meaningful applications that solve real-world problems.</p>
+
+            <div class="mt-10 flex flex-wrap justify-center gap-10">
+                <!-- Skill Card -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md w-64">
+                    <h3 class="text-xl font-semibold">HTML & CSS</h3>
+                    <div class="relative pt-4">
+                        <div class="h-2 bg-gray-300 rounded-full">
+                            <div class="h-2 bg-secondary rounded-full w-9/12"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md w-64">
+                    <h3 class="text-xl font-semibold">JavaScript</h3>
+                    <div class="relative pt-4">
+                        <div class="h-2 bg-gray-300 rounded-full">
+                            <div class="h-2 bg-secondary rounded-full w-8/12"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md w-64">
+                    <h3 class="text-xl font-semibold">Python</h3>
+                    <div class="relative pt-4">
+                        <div class="h-2 bg-gray-300 rounded-full">
+                            <div class="h-2 bg-secondary rounded-full w-11/12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-primary">My Work</h2>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition">
+                    <h3 class="text-xl font-bold">Project 1</h3>
+                    <p class="mt-2 text-gray-400">A short description of the project goes here.</p>
+                    <a href="#" class="mt-4 inline-block text-secondary hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition">
+                    <h3 class="text-xl font-bold">Project 2</h3>
+                    <p class="mt-2 text-gray-400">A short description of the project goes here.</p>
+                    <a href="#" class="mt-4 inline-block text-secondary hover:underline">View Project</a>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:scale-105 transform transition">
+                    <h3 class="text-xl font-bold">Project 3</h3>
+                    <p class="mt-2 text-gray-400">A short description of the project goes here.</p>
+                    <a href="#" class="mt-4 inline-block text-secondary hover:underline">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-secondary">Contact Me</h2>
+            <form class="mt-10 max-w-lg mx-auto bg-gray-700 p-6 rounded-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-400">Name</label>
+                    <input type="text" id="name" class="w-full mt-2 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-400">Email</label>
+                    <input type="email" id="email" class="w-full mt-2 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-400">Message</label>
+                    <textarea id="message" rows="4" class="w-full mt-2 px-4 py-2 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-secondary text-white px-4 py-2 rounded-lg shadow-lg hover:bg-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center">
+        <p class="text-gray-500">&copy; 2024 Nihal Raza. All rights reserved.</p>
+    </footer>
+</body>
+</html>

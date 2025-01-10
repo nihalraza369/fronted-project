@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white text-center py-10">
+        <img src="namei.jpeg" alt="Nihal Raza" class="w-24 h-24 mx-auto rounded-full">
+        <h1 class="text-4xl font-bold mt-4">Welcome to My Blog</h1>
+        <p class="mt-2">Sharing my thoughts and ideas with the world</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-center space-x-6">
+            <a href="#about" class="text-blue-600 hover:underline">About</a>
+            <a href="#posts" class="text-blue-600 hover:underline">Blog Posts</a>
+            <a href="#contact" class="text-blue-600 hover:underline">Contact</a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto my-12 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6">
+            <img src="stock-vector-color-gradient-gradation-circle-vector-grain-noise-texture-holographic-blur-abstract-background-2271204509 - Copy.png" alt="Nihal Raza" class="w-48 h-48 rounded-full">
+            <p class="text-center md:text-left">
+                Hello! I'm Nihal Nughman Hussain, a passionate blogger who loves to write about technology, coding, and life experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section id="posts" class="bg-gray-50 py-12">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-6">Latest Blog Posts</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white shadow-md rounded-md overflow-hidden">
+                    <a href="long-post.html" class="block">
+                        <img src="61037-497754241_small.mp4" alt="Post Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Post Title 1</h3>
+                            <p class="mt-2 text-gray-600">This is a long description blog post. Click below to read more.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="bg-white shadow-md rounded-md overflow-hidden">
+                    <a href="short-post.html" class="block">
+                        <img src="depositphotos_222579324-stock-photo-gold-background-texture-gradients-shadow.jpg" alt="Post Image" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold">Post Title 2</h3>
+                            <p class="mt-2 text-gray-600">This is a short description blog post. Click below to read more.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto my-12 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Contact Me</h2>
+        <form id="contactForm" class="bg-white shadow-md rounded-md p-6 space-y-4">
+            <div>
+                <label for="name" class="block text-sm font-medium">Name</label>
+                <input type="text" id="name" class="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name" required>
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input type="email" id="email" class="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Your Email" required>
+            </div>
+            <div>
+                <label for="message" class="block text-sm font-medium">Message</label>
+                <textarea id="message" rows="5" class="w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto text-center space-y-4">
+            <div>
+                <p>Contact Me:</p>
+                <ul class="space-y-2">
+                    <li><a href="tel:+1234567890" class="hover:underline">Phone: +123 456 7890</a></li>
+                    <li><a href="https://wa.me/+1234567890" target="_blank" class="hover:underline">WhatsApp: +923198435972</a></li>
+                </ul>
+            </div>
+            <div>
+                <p>Follow Me:</p>
+                <ul class="flex justify-center space-x-4">
+                    <li><a href="https://www.instagram.com/yourprofile" target="_blank" class="hover:underline">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:underline">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/yourprofile" target="_blank" class="hover:underline">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="mt-4">&copy; 2024 Nihal Raza. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                const response = await fetch('http://127.0.0.1:8000/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, message })
+                });
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            } catch (error) {
+                alert('Error: Unable to connect to the server. Please check your connection or try again later.');
+            }
+        });
+    </script>
+</body>
+
+</html>

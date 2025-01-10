@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Navbar</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="in6.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="protofile">
+         <div class="inbox">
+             <img src="namei.jpeg" alt="nihalpic">
+         </div>
+         <div class="heading">
+              <h3 class="tittle">Webkit Coding</h3>
+              <h4 class="label">Developer</h4>
+         </div>
+      </div>
+      <ul>
+          <li><a href="#home" onclick="showSection('home')"><i class="uil uil-estate"></i><span>Home</span></a></li>
+          <li><a href="#about" onclick="showSection('about')"><i class="uil uil-user"></i><span>About</span></a></li>
+          <li><a href="#contact" onclick="showSection('contact')"><i class="uil uil-phone-volume"></i><span>Contact</span></a></li>
+          <li><a href="#profile" onclick="showSection('profile')"><i class="uil uil-user-circle"></i><span>Profile</span></a></li>
+          <li><a href="#experience" onclick="showSection('experience')"><i class="uil uil-suitcase"></i><span>My Experience</span></a></li>
+          <li><a href="#work" onclick="showSection('work')"><i class="uil uil-briefcase"></i><span>My Work</span></a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <section id="home" class="content-section active">
+            <h1>Welcome to the Home Page</h1>
+            <p>Explore the various sections to learn more about me and my work.</p>
+        </section>
+        <section id="about" class="content-section">
+            <h1>About Me</h1>
+            <p>I am a developer passionate about creating amazing projects. Learn more about my skills here.</p>
+        </section>
+        <section id="contact" class="content-section">
+            <h1>Contact</h1>
+            <p>Feel free to reach out through email or phone for any inquiries or collaborations.</p>
+        </section>
+        <section id="profile" class="content-section">
+            <h1>Profile</h1>
+            <p>This is my profile section. Get to know more about my journey and achievements.</p>
+        </section>
+        <section id="experience" class="content-section">
+            <h1>My Experience</h1>
+            <p>Here are the details of my professional experience and the projects I have worked on.</p>
+        </section>
+        <section id="work" class="content-section">
+            <h1>My Work</h1>
+            <p>Check out some of my best projects and collaborations in this section.</p>
+        </section>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</body>
+</html>

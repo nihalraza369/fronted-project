@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Backend Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #444;
+        }
+
+
+        a {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #0078d7;
+            font-weight: bold;
+        }
+
+        
+        .code-container {
+            margin-bottom: 20px;
+        }
+
+        .code-section {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+
+        .output-section {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+            border-left: 5px solid #4caf50;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project 1</h1>
+    </header>
+    <main>
+        <p>This is the code or details for Project 1:</p>
+        
+        <div class="code-container">
+            <h2>Code:</h2>
+            <div class="code-section">
+                <pre>
+            
+"This is a higher and lower game, and there will be 5 rounds. The numbers will range from 1 to 100, and a number will appear in front of the player. They just have to guess whether it is lower or higher."
+import random
+
+
+NUM_ROUNDS = 5
+
+
+print("Welcome to the High-Low Game!")
+print("--------------------------------")
+
+
+score = 0
+
+
+for round_number in range(1, NUM_ROUNDS + 1):
+    print(f"Round {round_number}")
+
+    user_number = random.randint(1, 100)
+    computer_number = random.randint(1, 100)
+
+    print(f"Your number is {user_number}")
+
+
+    user_guess = input("Do you think your number is higher or lower than the computer's? (higher/lower): ").strip().lower()
+
+    if (user_guess == "higher" and user_number > computer_number) or (user_guess == "lower" and user_number < computer_number):
+        print("You were right! The computer's number was", computer_number)
+        score += 1
+    else:
+        print("Aww, that's incorrect. The computer's number was", computer_number)
+
+
+    print("Your score is now", score)
+    print()
+
+print("Thanks for playing!")
+
+if score == NUM_ROUNDS:
+    print("Wow! You played perfectly!")
+elif score >= NUM_ROUNDS //2 :
+    print("Good job, you played really well!")
+else:
+    print("Better luck next time!")
+</pre>
+</div>
+</div>
+
+
+<div class="output-container">
+    <h2>Output:</h2>
+    <div class="output-section">
+        <pre>
+     
+Welcome to the High-Low Game!
+--------------------------------
+Round 1
+Your number is 60
+Do you think your number is higher or lower than the computer's? (higher/lower): higher
+You were right! The computer's number was 49
+Your score is now 1
+
+Round 2
+Your number is 74
+Do you think your number is higher or lower than the computer's? (higher/lower): lower
+You were right! The computer's number was 77
+Your score is now 2
+
+Round 3
+Your number is 35
+Do you think your number is higher or lower than the computer's? (higher/lower): higher
+You were right! The computer's number was 14
+Your score is now 3
+
+Round 4
+Your number is 2
+Do you think your number is higher or lower than the computer's? (higher/lower): higher
+Aww, that's incorrect. The computer's number was 59
+Your score is now 3
+
+Round 5
+Your number is 51
+Do you think your number is higher or lower than the computer's? (higher/lower): higher
+You were right! The computer's number was 24
+Your score is now 4
+
+Thanks for playing!
+Good job, you played really well!
+</pre>
+</div>
+</div>
+        <a href="in7backend.html">Go Back to Projects</a>
+    </main>
+</body>
+</html>

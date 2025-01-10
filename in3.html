@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nihal Raza</title>
+    <link rel="stylesheet" href="in3.css">
+    <script src="in3.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513', // Brown
+                        secondary: '#A9A9A9', // Gray
+                    },
+                },
+            },
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from("#home", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out" });
+            gsap.utils.toArray("section").forEach((section) => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                    },
+                    duration: 1.5,
+                    x: -100,
+                    opacity: 0,
+                    ease: "power3.out",
+                });
+            });
+        });
+    </script>
+</head>
+<body class="bg-gray-800 text-white">
+    <!-- Navbar -->
+    <header class="sticky top-0 bg-gray-900 shadow-lg">
+        <nav class="container mx-auto flex items-center justify-between py-4">
+            <h1 class="text-2xl font-bold text-primary">Nihal's Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-secondary">Home</a></li>
+                <li><a href="#about" class="hover:text-secondary">About</a></li>
+                <li><a href="#portfolio" class="hover:text-secondary">Portfolio</a></li>
+                <li><a href="#contact" class="hover:text-secondary">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary">
+        <div class="text-center">
+            <img src="namei.jpeg" alt="Nihal Raza" class="w-40 h-40 mx-auto rounded-full shadow-lg">
+            <h2 class="text-4xl md:text-6xl font-extrabold mt-4">Hi, I'm Nihal Raza</h2>
+            <p class="mt-4 text-lg">A Full Stack Developer | AI Enthusiast | Innovator</p>
+            <a href="#portfolio" class="mt-6 inline-block bg-white text-primary px-6 py-3 rounded-lg shadow-lg hover:bg-secondary hover:text-white">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-gray-700">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-primary">About Me</h2>
+            <p class="mt-6 text-center text-gray-300">I'm a passionate developer with expertise in web development and AI solutions. My goal is to create meaningful applications that solve real-world problems.</p>
+  
+            <!-- New content with circles and percentages -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- HTML & CSS -->
+                <div class="container text-center">
+                    <div class="circle mb-4">
+                        <div class="circle-text text-4xl">90%</div>
+                    </div>
+                    <span class="circle_num text-xl font-semibold text-primary">HTML & CSS</span>
+                    <p class="description text-gray-300">
+                        HTML and CSS are the building blocks of web development. Mastering them is the first step to creating amazing websites!
+                    </p>
+                </div>
+    
+                <!-- JavaScript -->
+                <div class="container text-center">
+                    <div class="circle mb-4">
+                        <div class="circle-text text-4xl">80%</div>
+                    </div>
+                    <span class="circle_num text-xl font-semibold text-primary">JavaScript</span>
+                    <p class="description text-gray-300">
+                        JavaScript adds interactivity to web pages, allowing you to create dynamic and engaging user experiences.
+                    </p>
+                </div>
+    
+                <!-- Python -->
+                <div class="container text-center">
+                    <div class="circle mb-4">
+                        <div class="circle-text text-4xl">95%</div>
+                    </div>
+                    <span class="circle_num text-xl font-semibold text-primary">Python</span>
+                    <p class="description text-gray-300">
+                        Python is a versatile programming language used for web development, data science, and automation.
+                    </p>
+                </div>
+    
+                <!-- TypeScript -->
+                <div class="container text-center">
+                    <div class="circle mb-4">
+                        <div class="circle-text text-4xl">70%</div>
+                    </div>
+                    <span class="circle_num text-xl font-semibold text-primary">TypeScript</span>
+                    <p class="description text-gray-300">
+                        TypeScript is JavaScript with superpowers, making large-scale applications easier to build and maintain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Additional styles -->
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #1f2937;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid #4B5563;
+        }
+    
+        .circle-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+    
+        .circle-num {
+            display: block;
+            margin-top: 8px;
+            font-size: 1.25rem;
+            color: #fff;
+        }
+    
+        .description {
+            font-size: 0.875rem;
+            color: #D1D5DB;
+            margin-top: 8px;
+        }
+    </style>
+    
+    <!-- GSAP animation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from(".circle-text", { duration: 1.5, scale: 0.5, opacity: 0, ease: "power3.out", stagger: 0.2 });
+            gsap.from(".description", { duration: 1.5, y: 50, opacity: 0, ease: "power3.out", stagger: 0.3 });
+        });
+    </script>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-700">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-primary">Contact Me</h2>
+            <form class="mt-10 max-w-lg mx-auto bg-gray-800 p-6 rounded-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-400">Name</label>
+                    <input type="text" id="name" class="w-full mt-2 px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-400">Email</label>
+                    <input type="email" id="email" class="w-full mt-2 px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-400">Message</label>
+                    <textarea id="message" rows="4" class="w-full mt-2 px-4 py-2 bg-gray-900 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-white px-4 py-2 rounded-lg shadow-lg hover:bg-secondary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center">
+        <p class="text-gray-500">&copy; 2024 Nihal Raza. All rights reserved.</p>
+    </footer>
+</body>
+</html>
