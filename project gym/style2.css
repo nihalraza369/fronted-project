@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #d1c9c9;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #7d2929;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header :hover{
+    background-color: #f60;
+    padding: 20px;
+    top: 0;
+    z-index: 1000;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #f60;
+}
+
+.hero {
+    background: url('gym-hero.jpg') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .join-btn {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease;
+}
+
+.join-btn {
+    padding: 12px 25px;
+    background-color: #f60;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.join-btn:hover {
+    background-color: #e55;
+}
+
+#services, #trainers, #contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.service-cards, .trainer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card, .trainer {
+    padding: 30px;
+    background-color: #120101;
+    color: #fff6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover, .trainer:hover {
+    transform: translateY(-10px);
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.trainer img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: aqua;
+}
+footer:hover{
+    background-color: antiquewhite;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

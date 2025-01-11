@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('gym-hero.jpg');
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f60;
+    color: #fff;
+    cursor: pointer;
+}
+
+#services, #trainers, #contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.service-cards, .trainer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card, .trainer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}

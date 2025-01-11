@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymX - Transform Your Body</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">GymX</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Transform Your Body</h1>
+        <p>Join the ultimate fitness journey with GymX.</p>
+        <a href="#contact" class="join-btn">Join Now</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card" onclick="showAlert('Personal Training')">
+                <h3>Personal Training</h3>
+                <p>One-on-one sessions with top trainers.</p>
+            </div>
+            <div class="card" onclick="showAlert('Yoga Classes')">
+                <h3>Yoga Classes</h3>
+                <p>Relax and rejuvenate with our yoga sessions.</p>
+            </div>
+            <div class="card" onclick="showAlert('Cardio Workouts')">
+                <h3>Cardio Workouts</h3>
+                <p>Boost your heart health with high-intensity workouts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trainers">
+        <h2>Meet Our Trainers</h2>
+        <div class="trainer-cards">
+            <div class="trainer">
+                <img src="1721561899495 (1).png" alt="John Doe">
+                <h3>Nihal Raza</h3>
+                <p>Strength & Conditioning Coach</p>
+            </div>
+            <div class="trainer">
+                <img src="Screenshot 2024-11-10 014042.png" alt="Jane Smith">
+                <h3>Bilal Raza</h3>
+                <p>Yoga & Flexibility Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GymX. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
