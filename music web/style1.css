@@ -1,0 +1,63 @@
+/* Resetting margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px; /* Width of the sidebar */
+    height: 100%; /* Full height */
+    background-color: black; /* Background color of the sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px; /* Add some space at the top */
+}
+
+/* Sidebar navigation items */
+.nav-item {
+    text-decoration: none;
+    color: white; /* Default text color */
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0; /* Spacing between links */
+    padding: 10px 20px; /* Add some padding for hover effect */
+    width: 80%; /* Make the hover area larger */
+    text-align: center; /* Center align the text */
+    border-radius: 5px; /* Smooth edges for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for navigation items */
+.nav-item:hover {
+    background-color: white; /* Background changes to white */
+    color: black; /* Text changes to black */
+    transform: scale(1.1); /* Slightly enlarge the link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 220px; /* Add space to account for the sidebar */
+    padding: 20px;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: black;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #555;
+}

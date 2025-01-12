@@ -1,0 +1,115 @@
+
+/* Centering the images container */
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Disable scroll */
+}
+
+/* Container for the images */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+}
+
+/* Styling for the navigation bar */
+.nav-bar {
+    position: absolute;
+    top: 10px; /* Positioning the navbar near the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center align the navbar */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 10; /* Make sure the navbar is above images */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Styling for each image */
+
+.carousel {
+    overflow: hidden;
+    right: 227px;
+    bottom: 2px;
+    height: 591px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+/* Width of the carousel */
+    perspective: 1200px; /* 3D perspective for depth effect */
+    overflow: visible; /* Allow images to go outside bounds */
+  }
+  
+
+  
+  .carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the full screen */
+    object-position: center; /* Center the image */
+    opacity: 0; /* Initially
+    border-radius: 43px 0px 0px 47px; /* Rounded corners */
+    /* Maintain aspect ratio */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transform-origin: center center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+
+  }
+  
+  .carousel-image.inactive {
+    opacity: 0.3; /* Dim inactive images */
+    filter: blur(5px); /* Blur for inactive images */
+  }
+  
+  .carousel-image:nth-child(1) { z-index: 2; }
+  .carousel-image:nth-child(2) { z-index: 1; }
+  .carousel-image:nth-child(3) { z-index: 0; }
+  /*
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(211, 21, 21, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  */
+  #prev {
+    left: 177px;
+  }
+  
+  #next {
+    right: 244px;
+  }
+
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the full screen */
+    object-position: center; /* Center the image */
+    opacity: 0; /* Initially hide all images */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Add animation to images */
+.image.active {
+    opacity: 1;
+    transform: scale(1); /* Keep the image normal size */
+}

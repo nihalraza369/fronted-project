@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage with Mood Songs</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                display: flex;
+                flex-direction: column;
+                background-color: black;
+                color: white;
+                font-family: Arial, sans-serif;
+            }
+            
+                .navbar {
+                  width: 15%;
+                  background-color: black;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 10px 0;
+                  border-right: 2px solid white;
+                }
+            
+                .navbar a {
+                  text-decoration: none;
+                  color: white;
+                  font-size: 1.2rem;
+                  margin: 10px 0;
+                  transition: all 0.3s ease;
+                }
+            
+                .navbar a:hover {
+                  background-color: white;
+                  color: black;
+                  padding: 5px 15px;
+                  border-radius: 5px;
+                }
+
+    .content {
+      width: 100%;
+      height: 70vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    video, .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    video.active, .image.active {
+      opacity: 1;
+    }
+
+    .image {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .image:nth-child(2) {
+      background-image: url('image1.jpg');
+    }
+
+    .image:nth-child(3) {
+      background-image: url('image2.jpg');
+    }
+    
+    .mood-section {
+        padding: 20px;
+        background-color: #111;
+    }
+    
+    .mood-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #ff6f61;
+    }
+
+    .mood-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    
+    .mood-item {
+        position: relative;
+        background-color: #222;
+        border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mood-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .mood-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    }
+    
+    .mood-item .label {
+        position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+      padding: 5px;
+      font-size: 0.9rem;
+    }
+    </style>
+</head>
+<body>
+    
+    
+    <!-- Navbar -->
+    <!-- Content Section -->
+    <div class="content">
+    <video class="active" src="8781620-uhd_4096_2160_25fps.mp4" autoplay muted></video>
+    <video src="7578623-uhd_4096_2160_25fps.mp4"></video>
+    <div class="image"></div>
+    <div class="image"></div>
+
+
+  <!-- Mood Section -->
+  <div class="mood-section">
+      <h2 class="mood-title">Mood Songs</h2>
+      <div class="mood-grid">
+          <div class="mood-item">
+              <img src="mood1.jpg" alt="Mood 1">
+              <div class="label">Mood 1</div>
+            </div>
+      <div class="mood-item">
+          <img src="mood2.jpg" alt="Mood 2">
+        <div class="label">Mood 2</div>
+      </div>
+      <div class="mood-item">
+        <img src="mood3.jpg" alt="Mood 3">
+        <div class="label">Mood 3</div>
+      </div>
+      <div class="mood-item">
+          <img src="mood4.jpg" alt="Mood 4">
+          <div class="label">Mood 4</div>
+      </div>
+      <div class="mood-item">
+          <img src="mood5.jpg" alt="Mood 5">
+          <div class="label">Mood 5</div>
+        </div>
+      <div class="mood-item">
+          <img src="mood6.jpg" alt="Mood 6">
+        <div class="label">Mood 6</div>
+      </div>
+      <div class="mood-item">
+          <img src="mood7.jpg" alt="Mood 7">
+          <div class="label">Mood 7</div>
+        </div>
+        <div class="mood-item">
+        <img src="mood8.jpg" alt="Mood 8">
+        <div class="label">Mood 8</div>
+      </div>
+      <div class="mood-item">
+        <img src="mood9.jpg" alt="Mood 9">
+        <div class="label">Mood 9</div>
+      </div>
+      <div class="mood-item">
+          <img src="mood10.jpg" alt="Mood 10">
+          <div class="label">Mood 10</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const videos = document.querySelectorAll("video");
+    const images = document.querySelectorAll(".image");
+    let currentMedia = 0;
+    const media = [...videos, ...images];
+
+    function playSequence() {
+      media.forEach((item, index) => item.classList.remove("active"));
+      const current = media[currentMedia];
+      current.classList.add("active");
+
+      if (current.tagName === "VIDEO") {
+        current.play();
+        current.onended = () => {
+          currentMedia = (currentMedia + 1) % media.length;
+          playSequence();
+        };
+      } else {
+        setTimeout(() => {
+          currentMedia = (currentMedia + 1) % media.length;
+          playSequence();
+        }, 3000);
+      }
+    }
+
+    playSequence();
+  </script>
+</body>
+</html>
+
+
+
