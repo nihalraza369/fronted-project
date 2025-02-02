@@ -1,0 +1,48 @@
+ QUARTER;01/ONLINE CLASS[01]            100/97
+
+INNOVATIION; PROBLEM SOLVING KRNA EX: koi bussiness start krne
+kaa plane.
+integration; kisi ke sath connect krnaa.
+customization; kisi cheez ko apni zarurat ke mutabiq adjust 
+karna ya apni marzi se usme tabdeeli lana.
+open source; jo public share hoo.
+close source; jo private share hoo.
+INFERENCE; ab me sawal phochu or app ko uska answer pata hoo
+or usi phoche hoe sawal se app apni knowledge istiaml krke
+answer de.
+fine tuned; jo pehle siki hoi usko improve yaa update krwana yaa phr
+jo pehle se nhi seekhi hoi usko seekhdenaa 
+
+ai ke 4 terminology hn;
+1.artificial intelligence
+2.generative ai
+3.machine learning
+4.deep learning
+ab reason ye hn ke abhi dunya me generative ai
+kaa tofan aya hn to pakistan me khi jago pe ai 
+krwarhe hn maslaa yaha ata hn hum ai nhi krhe 
+hum generated ai karhe kio ke iske peeche reason
+ye hn ke microsoft graphic yaa open ai ye company
+generatd ai ki waja se chl rhi.
+
+cpu(central processing unit);ke bht sare core hote hn wo alag 
+alag kaam krte hn EX.CORE1,CORE4
+gpu(graphis procssing unit);me thousand core hote hn wo bht sare kaam aik hi waqt me
+krde taa hn
+npu(neural processing unit);or ye neural network
+WHAT IS AGI?
+AGI KAAM KO BHT BEHTAR BANADETAA HN MTLB SAMJHO 
+2 INSAAN HN 1 ME HOO OR 2 KOI INSAAN HN OR 2 WALA
+MUJHPE GUSSA KRHAA HN TO MUJHE BHI GUSSA AYGAA TO 
+PHR BAAT PHADE PE AJYEGI LAKIN AB AGI PE FOCUS KARO
+AB ME AGI HO OR 2 WALA KOI INSAAN HN OR AB WO MUJHPE
+GUSSA KRHAA HN TO AGI JO HN WO USPE GUSSA NHI KAREGAA
+WO USKO BEHTER BANYEGAA WO USKO SAMJHE GAA.
+agi abhi world me develop nhi hoa poora feature me aygaa
+ab agi narrow ai ko peeche chorsktaa hn ithink.
+ab agi ki taraf jane keliye 5 step ko follow kro;
+1.chatbot ex.(jo sawal phoche uksaa answer de jiski samj ho)
+2.reasoner ex.(jo ke fesle krtaahn yaa jisme yes/no ho)
+3.agent ex.(jo ke khud se fesle krtaa hn)
+4.innovater ex.(new update lana)
+5.organizations.apne kaam se bheter banadete hn
