@@ -1,0 +1,91 @@
+/* [project]/src/styles/ProfileImage.module.css [app-client] (css) */
+.ProfileImage-module__594-RW__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background-color: #121212;
+}
+
+.ProfileImage-module__594-RW__bgLogos {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 50%;
+  left: 65%;
+  transform: translateY(-50%);
+}
+
+.ProfileImage-module__594-RW__logo {
+  transition: transform .3s, filter .3s;
+}
+
+.ProfileImage-module__594-RW__logo:hover {
+  transform: scale(1.2)rotate(10deg);
+  filter: drop-shadow(0 0 15px #fc0);
+}
+
+.ProfileImage-module__594-RW__profileImage {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-right: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ffffff4d;
+}
+
+.ProfileImage-module__594-RW__mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ProfileImage-module__594-RW__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ProfileImage-module__594-RW__profileImage {
+  position: relative;
+  z-index: 10;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 15px #fff9;
+}
+
+.ProfileImage-module__594-RW__logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transition: transform .3s ease-in-out, filter .3s ease-in-out;
+  filter: drop-shadow(0 0 10px #fffc);
+}
+
+.ProfileImage-module__594-RW__logo:hover {
+  transform: scale(1.2)rotate(10deg);
+  filter: drop-shadow(0 0 20px #fff);
+}
+
+.ProfileImage-module__594-RW__topLogos {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  position: absolute;
+  top: -60px;
+}
+
+.ProfileImage-module__594-RW__bottomLogos {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  position: absolute;
+  bottom: -60px;
+}
+
+
+/*# sourceMappingURL=src_styles_ProfileImage_module_20166b17.css.map*/
