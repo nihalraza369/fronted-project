@@ -1,0 +1,140 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to bottom, rgb(0 81 81), rgb(87 93 56)), url('https://via.placeholder.com/1920x1080') no-repeat center / cover;
+}
+
+.navbar {
+  background: #838383;
+  width: 212px;
+  padding: 20px;
+  border: 2px solid rgba(254, 254, 254, 0.5);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.protofile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.protofile .inbox {
+  height: 80px;
+  width: 80px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.protofile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heading {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+ul li {
+  margin: 15px 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+ul li a i {
+  margin-right: 10px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+.promo-banner img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.food-box {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.food-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
