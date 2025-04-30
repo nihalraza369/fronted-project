@@ -1,0 +1,771 @@
+/* Define the keyframe animation */
+/* Define the keyframe animation for sliding in */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+       opacity: 0; 
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color:white;; 
+}
+
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 2em;
+    animation: slideIn 1s ease-out 0.1s;
+}
+
+
+img {
+    width: 100%; 
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    animation: slideIn 1s ease-out 0.1s;
+    
+}
+
+/* Paragraph styling */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    animation: slideIn 1s ease-out 1s; /* Add more delay for the paragraph */
+}
+
+/* 
+body {
+    animation: slideIn 1s ease-out; /* Apply the slideIn animation
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #f0f8ff);
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #333;
+    color: #fff;
+    animation: fadeIn 2s;
+}
+
+*/
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: #444;
+    padding: 10px 0;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: #555;
+}
+
+
+.profile-picture {
+    width: 350px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+
+
+
+
+.profile-picture-about {
+    width: 335px;
+    height: 439px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: -70px auto 18px;
+}
+/* About Section Styling */
+.section {
+    height: 100vh; /* Full screen height for testing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional background */
+}
+
+
+.profile-picture-about {
+    /*
+    width: 300px; 
+    height: auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+/* Trigger Animation on Scroll */
+.profile-picture-about.show {
+    transform: translateX(10%); 
+    transition: all 0.8s ease-out; 
+    /* transform: translateX(90); Move to original position */
+}
+
+
+
+/* Post container */
+.post {
+    position: relative; /* Allows positioning of child elements */
+    width: 45%; /* Each post width */
+    height: 300px; /* Post height */
+    overflow: hidden; /* Hide overflow content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    background: #f3f3f3; /* Fallback background */
+    margin: 20px auto; /* Centering the posts */
+}
+
+/* Image inside post */
+.post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image fits to container */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+/* Post Title (Text inside image) */
+.post div {
+    position: absolute;
+    z-index: 50px;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true centering */
+    color: white; /* Text color */
+    font-size: 1.5em;
+    text-shadow: 7px 16px 5px rgba(20, 20, 30, 54.8); /* Shadow for better visibility */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for the image */
+.post:hover img {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Styling for the posts container */
+.posts {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+/*
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.posts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.post {
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    background: #FFF9C4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: slideIn 1s ease-out forwards; 
+}
+
+
+.posts :hover{
+    transition: 1s;
+    background: #a4a4a4;
+}
+.post:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.post:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+ 
+/* General Section Styling */
+.section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+/* Contact Section Heading */
+#contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Input Styling */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 11px -16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Hover Effect for Input Fields */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7d9b19; /* Change border color on focus */
+    outline: none;
+}
+
+/* Button Styling */
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #FFF9C4;
+    color: rgb(21, 1, 1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+/* Button Hover Effect */
+.contact-form button:hover {
+    background-color: #30000e; /* Darker shade */
+    transform: translateY(-5px); /* Slight raise on hover */
+}
+
+/* Contact Form Label Styling */
+.contact-form label {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form button {
+        padding: 12px 20px;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: rgb(251, 251, 251);
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.social-links {
+    margin-bottom: 20px;
+}
+
+.contact-info ul,
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li,
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.contact-info a,
+.social-links a {
+    text-decoration: none;
+    color: rgb(23, 8, 8);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+
+.social-links a.instagram:hover {
+    background-color: #ff4081;
+color: white; } 
+
+    
+.social-links a.linkedin:hover {
+    background-color: #029dc3;
+color: white; } 
+    
+.social-links a.facebook:hover {
+    background-color: #213e7b;
+color: white; } 
+
+
+
+.social-icon {
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: #444;
+    margin: 0 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(155, 124, 124);
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+/* Footer Styling */
+/* Footer Styling */
+/*
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.contact-info, p {
+    color: darkseagreen;
+    font-size: 20px;
+}
+.contact-info,p :hover{
+    transform: translateY(-5px);
+}
+.contact-info,
+.social-links {
+    margin-bottom: 20px;
+}
+
+.contact-info ul,
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li,
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.contact-info a,
+.social-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Specific Colors for Social Links */
+.social-icon.instagram{
+    color: #eb9cb5; /* Instagram Pink */
+}
+
+.social-icon.facebook {
+    color: #1877f2; /* Facebook Blue */
+}
+
+.social-icon.linkedin {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-icon.instagram :hover{
+    color: #1877f2;
+}
+
+/*
+
+.contact-info a:hover::after,
+.social-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    background: currentColor; 
+    animation: slideInUnderline 0.5s forwards;
+}
+/*
+@keyframes slideInUnderline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+}
+
+*/
+
+
+/* Target headings and links */
+h1, h2, h3, label, nav a, .post h3, .footer-container p, .contact-info a,.social-icon a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Underline effect using ::after */
+h1::after, 
+h2::after, 
+h3::after, 
+label::after, 
+nav a::after, 
+.post h3::after, 
+.footer-container p::after, 
+.contact-info a::after, 
+.social-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust underline distance */
+    width: 0; /* Start with no underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: #b7a823; /* Underline color */
+    transition: width 0.4s ease; /* Smooth transition */
+}
+
+/* On hover, reveal the underline */
+h1:hover::after, 
+h2:hover::after, 
+h3:hover::after, 
+label:hover::after, 
+nav a:hover::after, 
+.post h3:hover::after, 
+.footer-container p:hover::after, 
+.contact-info a:hover::after, 
+.social-links a:hover::after {
+    width: 100%; /* Fully visible underline */
+}
+
+
+/*
+h1, h2, h3, label, nav a, .post h3, .footer-container p, .contact-info a, .social-links a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+h1:hover::after, 
+h2:hover::after, 
+h3:hover::after, 
+label:hover::after, 
+nav a:hover::after, 
+.post h3:hover::after, 
+.footer-container p:hover::after, 
+.contact-info a:hover::after, 
+.social-links a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px; 
+    background-color: #ff6600; 
+    animation: slideIn 0.4s forwards;
+}
+
+/*
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+/*
+
+h1, h2, h3, label, nav a, .post h3, .footer-container p, .contact-info a, .social-links a {
+    transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, label:hover, nav a:hover, .footer-container p:hover, .contact-info a:hover, .social-links a:hover {
+    color: #ff6600; 
+}
+
+
+*/
+
+/*
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}*/
+
+/* 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    padding: 40px;
+    position: relative;
+}
+
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+
+#about {
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.profile-picture-about {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.navbar a:hover {
+    background-color: #ff4081;
+    border-radius: 5px;
+}
+
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.post {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    margin: 0 0 10px;
+}
+
+.post a {
+    color: #ff4081;
+    text-decoration: none;
+}
+
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+*/
